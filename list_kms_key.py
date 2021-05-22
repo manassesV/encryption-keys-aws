@@ -6,6 +6,7 @@ import json
 kms_client = boto3.client('kms', region_name='us-west-1')
 try:
    response = kms_client.list_keys()
-   except ClientError as e:
+
+except ClientError as e:
        logging.error(e)
-   print(json.dumps(response, indent=4, sort_keys=True))
+print(json.dumps(response, indent=4, sort_keys=True))

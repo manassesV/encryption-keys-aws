@@ -3,8 +3,10 @@ import boto3
 
 kms_client = boto3.client('kms', region_name='us-west-1')
 response = kms_client.schedule_key_deletion(
-    KeyId='fasd',
-	PendingWindowInDays=7
+    KeyId='e35424cf-bbd6-4ef5-8567-1eee9f981c8d',
+    PendingWindowInDays=7
 )
+print(response)
 
-print(response, indent=4, sort_keys=True)
+
+			
